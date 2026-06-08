@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart Quest Love Letter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-layer" id="floatingLayer"></div>
+
+  <main class="app">
+    <section class="hero" id="gameScreen">
+      <div class="top-card">
+        <p class="mini-title">♡ Heart Quest ♡</p>
+        <h1 id="gameTitle">Kumpulkan 5 Hati</h1>
+        <p id="gameSubtitle">Temukan semua hati kecil yang bersembunyi di dunia pastel ini.</p>
+        <div class="progress-wrap">
+          <div class="progress-info">
+            <span>Hati terkumpul</span>
+            <strong><span id="heartCount">0</span>/<span id="heartTotal">5</span></strong>
+          </div>
+          <div class="progress-bar"><div id="progressFill"></div></div>
+        </div>
+      </div>
+
+      <div class="game-area" id="gameArea" aria-label="Area game kumpulkan hati">
+        <div class="cloud c1">☁</div>
+        <div class="cloud c2">☁</div>
+        <div class="cloud c3">☁</div>
+        <div class="grass"></div>
+      </div>
+
+      <button class="sound-btn" id="soundBtn" type="button">♪ Musik</button>
+    </section>
+
+    <section class="treasure-screen hidden" id="treasureScreen">
+      <div class="treasure-card">
+        <p class="mini-title">Yeay! Semua hati ditemukan</p>
+        <h2 id="treasureTitle">Peti Cinta Terbuka Untukmu</h2>
+        <p id="treasureSubtitle">Tekan peti hati ini untuk membuka hadiah rahasianya.</p>
+
+        <button class="heart-chest" id="heartChest" type="button" aria-label="Buka peti harta karun hati">
+          <span class="chest-lid"></span>
+          <span class="chest-body"></span>
+          <span class="chest-lock">♡</span>
+          <span class="spark s1">✦</span>
+          <span class="spark s2">✧</span>
+          <span class="spark s3">✦</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="letter-screen hidden" id="letterScreen">
+      <div class="letter-wrap">
+        <div class="letter-paper">
+          <p class="mini-title" id="letterTo">Dear Kamu</p>
+          <h2 id="letterTitle">Surat Kecil Dari Hatiku</h2>
+          <div class="letter-text" id="letterText"></div>
+          <button class="skip-btn" id="skipBtn" type="button">Tampilkan semua</button>
+          <p class="signature" id="signature">With love, Aku</p>
+        </div>
+      </div>
+
+      <div class="gallery-block" id="galleryBlock">
+        <p class="mini-title">Galeri Kenangan</p>
+        <h2>Foto Favorit Kita</h2>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="photoModal">
+    <button class="modal-close" id="modalClose" type="button">×</button>
+    <img id="modalImage" src="" alt="Foto galeri" />
+    <p id="modalCaption"></p>
+  </div>
+
+  <audio id="bgMusic" loop></audio>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
